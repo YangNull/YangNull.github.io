@@ -266,6 +266,178 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-测试博客" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/17/测试博客/" class="article-date">
+      <time datetime="2016-10-17T09:22:37.613Z" itemprop="datePublished">2016-10-17</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="限定查询"><a href="#限定查询" class="headerlink" title="限定查询"></a>限定查询</h1><p>限定查询就是为了控制数据行的显示，可以根据条件进行数据行的筛选操作。在执行的顺序之中，WEHERE的执行顺序为：</p>
+<pre><code>3 -&gt; SELECT ...
+1 -&gt; FROM ...
+2 -&gt; WHERE ...
+</code></pre><h3 id="限定查询的符号"><a href="#限定查询的符号" class="headerlink" title="限定查询的符号:"></a>限定查询的符号:</h3><ul>
+<li>关系运算符:&gt;,&lt;,&lt;=,&gt;=,&lt;&gt;(!=)</li>
+<li>逻辑运算符:AND,OR,NOT </li>
+<li>范围运算:BETWEEN…AND</li>
+<li>谓词范围:IN,NOT IN</li>
+<li>空判断:IS NULL,IS NOT NULL</li>
+<li>模糊查询:LINK</li>
+</ul>
+<h3 id="关系运算符的限定查询操作"><a href="#关系运算符的限定查询操作" class="headerlink" title="关系运算符的限定查询操作:"></a>关系运算符的限定查询操作:</h3><pre><code>&gt;,&lt;,&lt;=,&gt;=,&lt;&gt;(!=)
+</code></pre><p>1、查询出基本工资高于1500的雇员信息</p>
+<pre><code>SELECT *
+FROM emp
+WHERE sal&gt;1500;
+</code></pre><p>2、查询SMITH的基本信息</p>
+<pre><code>SELECT *
+FROM emp
+WHERE ename=&apos;SMITH&apos;;
+</code></pre><p>在Oracle数据库中所有的数据是要区分一个大小写的关系的</p>
+<p>3、查询工资是5000雇员信息</p>
+<pre><code>SELECT *
+FROM emp
+WHERE sal=1500;
+</code></pre><p>在Oracle之中，所有的运算符号可以不区分数据类型进行运算</p>
+<p>4、查询职位不是销售人员的雇员编号、姓名、职位</p>
+<pre><code>SELECT empno,ename,job 
+FROM emp 
+WHERE job!=&apos;SALESMAN&apos;;
+
+SELECT empno,ename,job 
+FROM emp 
+WHERE job&lt;&gt;&apos;SALESMAN&apos;;
+</code></pre><p>这些运算符只是对数据进行单一的条件的筛选，基本的就是一个列加上一个属性！</p>
+<h3 id="逻辑运算符限定查询操作"><a href="#逻辑运算符限定查询操作" class="headerlink" title="逻辑运算符限定查询操作"></a>逻辑运算符限定查询操作</h3><pre><code>AND、OR、NOT
+</code></pre><p>如果现在在多个条件要进行查询，那要进行一个逻辑运算操作条件连接。</p>
+<ul>
+<li>与连接 所给的条件都要满足</li>
+<li>或连接 所给的条件只需要若干个满足即可</li>
+<li>非 如果条件条真则为假，如果条件为假则为真</li>
+<li><p>1、查询工资在1500~3000之间的雇员所有信息</p>
+<p>  SELECT *<br>  FROM emp<br>  WHERE sal&gt;=1500 AND sal&lt;=3000;</p>
+</li>
+</ul>
+<p>两个条件都必需要满足！</p>
+<p>2、查询工资大于2000的或者职位是CLERK的雇员信息。</p>
+<pre><code>SELECT * 
+FROM emp
+WHERE sal&gt;2000 OR job=&apos;CLERK&apos;;
+</code></pre><p>给出的条件只需要一个满足</p>
+<p>3、查询工资小于2000的雇员信息</p>
+<p>可以用 sal&lt;2000，但可以利用NOT作以下形式:</p>
+<pre><code>SELECT * 
+FROM emp
+WHERE NOT sal&gt;2000;
+</code></pre><h3 id="范围查询"><a href="#范围查询" class="headerlink" title="范围查询"></a>范围查询</h3><pre><code>BETWEEN...AND
+</code></pre><p>BETWEEN可以用于数字和字符串</p>
+<p>1、查询出工资在1500到2000的雇员信息</p>
+<p>不用BETWEEN…AND</p>
+<pre><code>SELECT *
+FROM emp
+WHERE sal&gt;=1500 AND sal&lt;=2000;
+</code></pre><p>用BETWEEN…AND</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE sal BETWEEN 1500 AND 2000;
+</code></pre><p>2、查询在1981年入职的雇员</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE hiredate BETWEEN &apos;01-1月-1981&apos; AND &apos;31-12月-1981&apos;;
+</code></pre><h3 id="空判断"><a href="#空判断" class="headerlink" title="空判断"></a>空判断</h3><pre><code>IS NULL、IS NOT NULL
+</code></pre><p>空在数据库上表示为不确定的内容，空在数据列上不为0，空的判断不为使用运算符进行运算！只能使用IS NULL IS NOT NULL(NOT IS NULL)</p>
+<p>1、查询所有领取了薪水的雇员</p>
+<p>领取了薪水那就是comm不为空</p>
+<pre><code>SELECT * F
+ROM emp 
+WHERE comm IS NOT NULL;
+</code></pre><p>将IS NULL 取反</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE NOT comm IS NULL;
+</code></pre><h3 id="IN-操作符"><a href="#IN-操作符" class="headerlink" title="IN 操作符"></a>IN 操作符</h3><pre><code>IN、NOT IN
+</code></pre><p>IN操作符和BETWEEN…AND相似，只不过BETWEEN…AND是给一个很大的一个范围！</p>
+<p>1、查询雇员编号为7369、7599、9999、7788的雇员信息</p>
+<p>不用IN</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE empno=7369 OR empno=7599 OR empno=9999 OR empno=7788;
+</code></pre><p>使用IN操作符</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE empno IN (7369,7599,9999,7788);
+</code></pre><p>2、查询雇员编号不为7369、7599、9999、7788的雇员信息</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE empno NOT IN (7369,7599,9999,7788);
+</code></pre><p>取反</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE NOT empno IN (7369,7599,9999,7788);
+</code></pre><p>!在使用NOT IN 进行操作时候遇到了NULL 就不会有结果返回</p>
+<p>3、使用IN操作中有NULL</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE empno IN (7369,7599,9999,NULL);
+</code></pre><p>却没有影响！</p>
+<p>4、使用NOT IN操作中有NULL</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE empno NOT IN (7369,7599,9999,NULL);
+</code></pre><p>却发现没有结果的返回。WHERE子句的作用就是限定数据行的返回，简单粗暴就是说不要给我返回全部的数据行，如果在一个数据表上有几千万条数据记录，一次性返回将会引发程序的崩溃。NOT IN 就是不在这给出的限定值中，有数据行永远不会为空的，那返回的将是全部的数据！</p>
+<h3 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h3><ul>
+<li><p>“_”匹配任意的一位字符</p>
+</li>
+<li><p>“%”匹配任意的零位、一位、多位字符</p>
+</li>
+</ul>
+<p>1、查询雇员姓名以A开头的信息</p>
+<pre><code>SELECT *　
+FROM emp 
+WHERE ename LIKE &apos;A%&apos;;
+</code></pre><p>2、查询雇员姓名第二位为A的雇员信息</p>
+<pre><code>SELECT *　
+FROM emp 
+WHERE ename LIKE &apos;_A%&apos;;
+</code></pre><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>WHERE 子句是放在FROM子句后面执行的，WHERE子句是控制数据行的显示，而SELECT是控制数据列的显示！</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

@@ -15,19 +15,37 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="限定查询限定查询就是为了控制数据行的显示，可以根据条件进行数据行的筛选操作。在执行的顺序之中，WEHERE的执行顺序为：
+3 -&amp;gt; SELECT ...
+1 -&amp;gt; FROM ...
+2 -&amp;gt; WHERE ...
+限定查询的符号:
+关系运算符:&amp;gt;,&amp;lt;,&amp;lt;=,&amp;gt;=,&amp;lt;&amp;gt;(!=)
+逻辑运算符:AND,OR,NOT 
+范围运算:BETWEEN…AND">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/10/17/hello-world/index.html">
+<meta property="og:title" content="YangKangJian">
+<meta property="og:url" content="http://yoursite.com/2016/10/17/测试博客/index.html">
 <meta property="og:site_name" content="YangKangJian">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-10-17T07:58:11.698Z">
+<meta property="og:description" content="限定查询限定查询就是为了控制数据行的显示，可以根据条件进行数据行的筛选操作。在执行的顺序之中，WEHERE的执行顺序为：
+3 -&amp;gt; SELECT ...
+1 -&amp;gt; FROM ...
+2 -&amp;gt; WHERE ...
+限定查询的符号:
+关系运算符:&amp;gt;,&amp;lt;,&amp;lt;=,&amp;gt;=,&amp;lt;&amp;gt;(!=)
+逻辑运算符:AND,OR,NOT 
+范围运算:BETWEEN…AND">
+<meta property="og:updated_time" content="2016-10-17T09:22:37.615Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="YangKangJian">
+<meta name="twitter:description" content="限定查询限定查询就是为了控制数据行的显示，可以根据条件进行数据行的筛选操作。在执行的顺序之中，WEHERE的执行顺序为：
+3 -&amp;gt; SELECT ...
+1 -&amp;gt; FROM ...
+2 -&amp;gt; WHERE ...
+限定查询的符号:
+关系运算符:&amp;gt;,&amp;lt;,&amp;lt;=,&amp;gt;=,&amp;lt;&amp;gt;(!=)
+逻辑运算符:AND,OR,NOT 
+范围运算:BETWEEN…AND">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -59,7 +77,7 @@ Quick">
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hello World | YangKangJian</title>
+<title>YangKangJian</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -263,11 +281,11 @@ Quick">
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-测试博客" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/17/hello-world/" class="article-date">
-      <time datetime="2016-10-17T07:58:11.698Z" itemprop="datePublished">2016-10-17</time>
+      <a href="/2016/10/17/测试博客/" class="article-date">
+      <time datetime="2016-10-17T09:22:37.613Z" itemprop="datePublished">2016-10-17</time>
 </a>
 
 
@@ -278,36 +296,137 @@ Quick">
       <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Hello World
-    </h1>
-  
-
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-        <div class="clearfix"></div>
-      </div>
-      
-    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h1 id="限定查询"><a href="#限定查询" class="headerlink" title="限定查询"></a>限定查询</h1><p>限定查询就是为了控制数据行的显示，可以根据条件进行数据行的筛选操作。在执行的顺序之中，WEHERE的执行顺序为：</p>
+<pre><code>3 -&gt; SELECT ...
+1 -&gt; FROM ...
+2 -&gt; WHERE ...
+</code></pre><h3 id="限定查询的符号"><a href="#限定查询的符号" class="headerlink" title="限定查询的符号:"></a>限定查询的符号:</h3><ul>
+<li>关系运算符:&gt;,&lt;,&lt;=,&gt;=,&lt;&gt;(!=)</li>
+<li>逻辑运算符:AND,OR,NOT </li>
+<li>范围运算:BETWEEN…AND</li>
+<li>谓词范围:IN,NOT IN</li>
+<li>空判断:IS NULL,IS NOT NULL</li>
+<li>模糊查询:LINK</li>
+</ul>
+<h3 id="关系运算符的限定查询操作"><a href="#关系运算符的限定查询操作" class="headerlink" title="关系运算符的限定查询操作:"></a>关系运算符的限定查询操作:</h3><pre><code>&gt;,&lt;,&lt;=,&gt;=,&lt;&gt;(!=)
+</code></pre><p>1、查询出基本工资高于1500的雇员信息</p>
+<pre><code>SELECT *
+FROM emp
+WHERE sal&gt;1500;
+</code></pre><p>2、查询SMITH的基本信息</p>
+<pre><code>SELECT *
+FROM emp
+WHERE ename=&apos;SMITH&apos;;
+</code></pre><p>在Oracle数据库中所有的数据是要区分一个大小写的关系的</p>
+<p>3、查询工资是5000雇员信息</p>
+<pre><code>SELECT *
+FROM emp
+WHERE sal=1500;
+</code></pre><p>在Oracle之中，所有的运算符号可以不区分数据类型进行运算</p>
+<p>4、查询职位不是销售人员的雇员编号、姓名、职位</p>
+<pre><code>SELECT empno,ename,job 
+FROM emp 
+WHERE job!=&apos;SALESMAN&apos;;
+
+SELECT empno,ename,job 
+FROM emp 
+WHERE job&lt;&gt;&apos;SALESMAN&apos;;
+</code></pre><p>这些运算符只是对数据进行单一的条件的筛选，基本的就是一个列加上一个属性！</p>
+<h3 id="逻辑运算符限定查询操作"><a href="#逻辑运算符限定查询操作" class="headerlink" title="逻辑运算符限定查询操作"></a>逻辑运算符限定查询操作</h3><pre><code>AND、OR、NOT
+</code></pre><p>如果现在在多个条件要进行查询，那要进行一个逻辑运算操作条件连接。</p>
+<ul>
+<li>与连接 所给的条件都要满足</li>
+<li>或连接 所给的条件只需要若干个满足即可</li>
+<li>非 如果条件条真则为假，如果条件为假则为真</li>
+<li><p>1、查询工资在1500~3000之间的雇员所有信息</p>
+<p>  SELECT *<br>  FROM emp<br>  WHERE sal&gt;=1500 AND sal&lt;=3000;</p>
+</li>
+</ul>
+<p>两个条件都必需要满足！</p>
+<p>2、查询工资大于2000的或者职位是CLERK的雇员信息。</p>
+<pre><code>SELECT * 
+FROM emp
+WHERE sal&gt;2000 OR job=&apos;CLERK&apos;;
+</code></pre><p>给出的条件只需要一个满足</p>
+<p>3、查询工资小于2000的雇员信息</p>
+<p>可以用 sal&lt;2000，但可以利用NOT作以下形式:</p>
+<pre><code>SELECT * 
+FROM emp
+WHERE NOT sal&gt;2000;
+</code></pre><h3 id="范围查询"><a href="#范围查询" class="headerlink" title="范围查询"></a>范围查询</h3><pre><code>BETWEEN...AND
+</code></pre><p>BETWEEN可以用于数字和字符串</p>
+<p>1、查询出工资在1500到2000的雇员信息</p>
+<p>不用BETWEEN…AND</p>
+<pre><code>SELECT *
+FROM emp
+WHERE sal&gt;=1500 AND sal&lt;=2000;
+</code></pre><p>用BETWEEN…AND</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE sal BETWEEN 1500 AND 2000;
+</code></pre><p>2、查询在1981年入职的雇员</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE hiredate BETWEEN &apos;01-1月-1981&apos; AND &apos;31-12月-1981&apos;;
+</code></pre><h3 id="空判断"><a href="#空判断" class="headerlink" title="空判断"></a>空判断</h3><pre><code>IS NULL、IS NOT NULL
+</code></pre><p>空在数据库上表示为不确定的内容，空在数据列上不为0，空的判断不为使用运算符进行运算！只能使用IS NULL IS NOT NULL(NOT IS NULL)</p>
+<p>1、查询所有领取了薪水的雇员</p>
+<p>领取了薪水那就是comm不为空</p>
+<pre><code>SELECT * F
+ROM emp 
+WHERE comm IS NOT NULL;
+</code></pre><p>将IS NULL 取反</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE NOT comm IS NULL;
+</code></pre><h3 id="IN-操作符"><a href="#IN-操作符" class="headerlink" title="IN 操作符"></a>IN 操作符</h3><pre><code>IN、NOT IN
+</code></pre><p>IN操作符和BETWEEN…AND相似，只不过BETWEEN…AND是给一个很大的一个范围！</p>
+<p>1、查询雇员编号为7369、7599、9999、7788的雇员信息</p>
+<p>不用IN</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE empno=7369 OR empno=7599 OR empno=9999 OR empno=7788;
+</code></pre><p>使用IN操作符</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE empno IN (7369,7599,9999,7788);
+</code></pre><p>2、查询雇员编号不为7369、7599、9999、7788的雇员信息</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE empno NOT IN (7369,7599,9999,7788);
+</code></pre><p>取反</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE NOT empno IN (7369,7599,9999,7788);
+</code></pre><p>!在使用NOT IN 进行操作时候遇到了NULL 就不会有结果返回</p>
+<p>3、使用IN操作中有NULL</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE empno IN (7369,7599,9999,NULL);
+</code></pre><p>却没有影响！</p>
+<p>4、使用NOT IN操作中有NULL</p>
+<pre><code>SELECT * 
+FROM emp 
+WHERE empno NOT IN (7369,7599,9999,NULL);
+</code></pre><p>却发现没有结果的返回。WHERE子句的作用就是限定数据行的返回，简单粗暴就是说不要给我返回全部的数据行，如果在一个数据表上有几千万条数据记录，一次性返回将会引发程序的崩溃。NOT IN 就是不在这给出的限定值中，有数据行永远不会为空的，那返回的将是全部的数据！</p>
+<h3 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h3><ul>
+<li><p>“_”匹配任意的一位字符</p>
+</li>
+<li><p>“%”匹配任意的零位、一位、多位字符</p>
+</li>
+</ul>
+<p>1、查询雇员姓名以A开头的信息</p>
+<pre><code>SELECT *　
+FROM emp 
+WHERE ename LIKE &apos;A%&apos;;
+</code></pre><p>2、查询雇员姓名第二位为A的雇员信息</p>
+<pre><code>SELECT *　
+FROM emp 
+WHERE ename LIKE &apos;_A%&apos;;
+</code></pre><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>WHERE 子句是放在FROM子句后面执行的，WHERE子句是控制数据行的显示，而SELECT是控制数据列的显示！</p>
 
       
     </div>
@@ -316,13 +435,13 @@ Quick">
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2016/10/17/hello-world/">Hello World</a></p>
+        <p><span>Title:</span><a href="/2016/10/17/测试博客/"></a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">YangKangJian</a></p>
-        <p><span>Created:</span>2016-10-17, 15:58:11</p>
-        <p><span>Updated:</span>2016-10-17, 15:58:11</p>
+        <p><span>Created:</span>2016-10-17, 17:22:37</p>
+        <p><span>Updated:</span>2016-10-17, 17:22:37</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/10/17/hello-world/" title="Hello World">http://yoursite.com/2016/10/17/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2016/10/17/hello-world/　　By YangKangJian" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2016/10/17/测试博客/" title="">http://yoursite.com/2016/10/17/测试博客/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2016/10/17/测试博客/　　By YangKangJian" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -334,12 +453,12 @@ Quick">
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/10/17/测试博客/">
-                    
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/10/17/hello-world/">
+                    Hello World
                 </a>
             </div>
-        
         
     </nav>
 
@@ -349,7 +468,7 @@ Quick">
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#限定查询"><span class="toc-number">1.</span> <span class="toc-text">限定查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#限定查询的符号"><span class="toc-number">1.0.1.</span> <span class="toc-text">限定查询的符号:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关系运算符的限定查询操作"><span class="toc-number">1.0.2.</span> <span class="toc-text">关系运算符的限定查询操作:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#逻辑运算符限定查询操作"><span class="toc-number">1.0.3.</span> <span class="toc-text">逻辑运算符限定查询操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#范围查询"><span class="toc-number">1.0.4.</span> <span class="toc-text">范围查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#空判断"><span class="toc-number">1.0.5.</span> <span class="toc-text">空判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IN-操作符"><span class="toc-number">1.0.6.</span> <span class="toc-text">IN 操作符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模糊查询"><span class="toc-number">1.0.7.</span> <span class="toc-text">模糊查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">1.0.8.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li></ol>
         
     </div>
     <style>
@@ -385,7 +504,7 @@ Quick">
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Hello World　| YangKangJian　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"　| YangKangJian　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -405,15 +524,15 @@ Quick">
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/10/17/测试博客/" title="Pre: ">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+            <a href="/2016/10/17/hello-world/" title="Next: Hello World">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
